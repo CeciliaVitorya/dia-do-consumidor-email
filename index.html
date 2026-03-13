@@ -7,18 +7,17 @@
 <style>
   body { margin: 0; padding: 0; background-color: #f4f6f8; font-family: Arial, Helvetica, sans-serif; }
   .wrapper { width: 100%; background-color: #f4f6f8; padding: 32px 0; }
-  .email-card { max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 12px; overflow: hidden; border: 1px solid #dce3ea; }
-  .header { background-color: #ff5400; padding: 22px 32px 18px; text-align: center; }
-  .header .logo { font-size: 22px; font-weight: bold; color: #ffffff; letter-spacing: 3px; margin: 0; }
+  .email-card { max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 12px 12px 0 0; overflow: hidden; border: 1px solid #dce3ea; }
+  .header { background-color: #ff5400; padding: 22px 32px 18px; text-align: center; border-bottom: 1px solid #ffffff; }
   .header .tagline { font-size: 11px; color: #ffe0cc; margin: 4px 0 0; }
-  .hero { background-color: #cc4300; padding: 36px 32px; text-align: center; }
+  .hero { background-color: #FF6000; padding: 36px 32px; text-align: center; }
   .badge { display: inline-block; background-color: #ffffff; color: #ff5400; font-size: 11px; font-weight: bold; padding: 5px 16px; border-radius: 20px; letter-spacing: 1px; margin-bottom: 14px; }
   .hero-title { color: #ffffff; font-size: 26px; font-weight: bold; line-height: 1.35; margin: 0 0 10px; }
   .hero-title span { color: #ffe0cc; }
   .hero-sub { color: #ffe0cc; font-size: 14px; margin: 0; line-height: 1.6; }
   .body { padding: 32px; }
   .greeting { font-size: 15px; color: #1C2833; margin: 0 0 12px; }
-  .intro { font-size: 14px; color: #566573; line-height: 1.7; margin: 0 0 24px; }
+  .intro { font-size: 14px; color: #000000; line-height: 1.7; margin: 0 0 24px; }
   .offer-box { background-color: #fff4ee; border-radius: 10px; border: 1px solid #ffb899; padding: 24px; text-align: center; margin-bottom: 24px; }
   .offer-label { font-size: 11px; font-weight: bold; color: #cc4300; letter-spacing: 1px; margin: 0 0 8px; }
   .offer-speed { font-size: 52px; font-weight: bold; color: #ff5400; line-height: 1; margin: 0; }
@@ -34,9 +33,13 @@
   .cta-btn { display: inline-block; background-color: #ff5400; color: #ffffff; font-size: 16px; font-weight: bold; padding: 16px 40px; border-radius: 8px; text-decoration: none; }
   .cta-sub { font-size: 12px; color: #7F8C8D; margin: 10px 0 0; }
   .divider { border: none; border-top: 1px solid #e8ecef; margin: 24px 0; }
-  .sign-off { font-size: 14px; color: #566573; line-height: 1.7; margin: 0; }
-  .footer { background-color: #f8f9fa; padding: 20px 32px; text-align: center; border-top: 1px solid #e8ecef; }
-  .footer p { font-size: 11px; color: #95A5A6; line-height: 1.6; margin: 0; }
+  .sign-off { font-size: 14px; color: #000000; line-height: 1.7; margin: 0 0 24px; }
+  .footer { background-color: #ff5400; padding: 20px 32px; text-align: center; border-top: 1px solid #e8ecef; }
+  .footer p { font-size: 11px; color: #ffffff; line-height: 1.6; margin: 0; }
+  @media only screen and (max-width: 480px) {
+    .feats td { display: block; width: 100% !important; padding: 6px 0; }
+    .feat { height: auto !important; }
+  }
 </style>
 </head>
 <body>
@@ -45,20 +48,21 @@
 
     <!-- HEADER -->
     <div class="header">
-      <p class="logo">NET.COM</p>
-      <p class="tagline">Internet de fibra óptica</p>
+      <a href="https://netcomfibra.com.br">
+        <img src="https://email-editor-production.s3.amazonaws.com/images/725226/Logo/logo%20branca.png" alt="NET.COM" style="height: 30px; width: auto; border: 0;" />
+      </a>    
     </div>
 
     <!-- HERO -->
     <div class="hero">
       <div class="badge">DIA DO CONSUMIDOR</div>
       <h1 class="hero-title">Sua primeira vez com a NET.COM<br>por um <span>preço histórico</span></h1>
-      <p class="hero-sub">600 Mega de fibra óptica por R$ 79,90/mês — uma oferta assim não aparece todo dia</p>
+      <p class="hero-sub">600 Mega por R$ 79,90/mês — uma oferta assim não aparece todo dia</p>
     </div>
 
     <!-- BODY -->
     <div class="body">
-      <p class="greeting">Oi, [Nome]! 👋</p>
+      <p class="greeting">Oi, *|PRIMEIRO_NOME|*!</p>
       <p class="intro">Se você ainda não conhece a NET.COM, o Dia do Consumidor é o melhor momento pra começar. A gente trouxe uma oferta que une velocidade de verdade com o menor preço do ano — e só dura até o final do mês.</p>
 
       <!-- OFERTA -->
@@ -68,7 +72,12 @@
         <p class="offer-price">por R$ 79,90/mês</p>
         <p class="offer-note">fidelidade de 12 meses &nbsp;•&nbsp; fibra óptica &nbsp;•&nbsp; instalação grátis*</p>
       </div>
-
+      
+      <!-- CTA -->
+      <div class="cta-wrap">
+        <a href="https://api.whatsapp.com/send/?phone=558009400198&text=Ol%C3%A1%21+Quero+o+plano+600+MEGA+por+R$+79,90.+&type=phone_number&app_absent=1" class="cta-btn" class="cta-btn">QUERO CONTRATAR AGORA</a>
+      </div>
+      
       <!-- FEATURES -->
       <table class="feats">
         <tr>
@@ -81,7 +90,7 @@
           <td>
             <div class="feat">
               <div class="feat-icon">📺</div>
-              <p class="feat-text">Netflix, YouTube e Spotify ao mesmo tempo sem travar</p>
+              <p class="feat-text">Disney, HBO Max e Deezer ao mesmo tempo sem travar</p>
             </div>
           </td>
         </tr>
@@ -103,30 +112,34 @@
 
       <!-- URGÊNCIA -->
       <div class="urgency-box">
-        <strong>Oferta válida até 31/03/2026.</strong> Essa condição é exclusiva do Dia do Consumidor — depois volta ao valor cheio. Se ficou interessado, não deixa pra depois. ⏰
+        <strong>Oferta válida até 31/03/2026.</strong> Essa condição é exclusiva do Dia do Consumidor — depois volta ao valor cheio. Se ficou interessado, não deixa pra depois!
       </div>
 
       <!-- CTA -->
       <div class="cta-wrap">
-        <a href="[LINK_CONTRATACAO]" class="cta-btn">Quero contratar agora</a>
-        <p class="cta-sub">Verificar disponibilidade na minha cidade</p>
+        <a href="https://api.whatsapp.com/send/?phone=558009400198&text=Ol%C3%A1%21+Quero+o+plano+600+MEGA+por+R$+79,90.+&type=phone_number&app_absent=1" class="cta-btn" class="cta-btn">QUERO CONTRATAR AGORA</a>
       </div>
 
       <hr class="divider">
 
       <p class="sign-off">
-        Qualquer dúvida, é só responder esse email ou falar com a gente. A NET.COM tem atendimento humano — de verdade.
-        <br><br>
-        Até logo,<br>
-        <strong>Equipe NET.COM</strong> 🌐
+        Qualquer dúvida, clica no botão abaixo e fala com a gente. A NET.COM tem atendimento humano de verdade.
       </p>
-    </div>
 
+    <!-- CTA -->
+    <div class="cta-wrap">
+      <a href="https://api.whatsapp.com/send/?phone=558009400198&text=Ol%C3%A1%21+Quero+saber+sobre+o+plano+600+MEGA+por+R$+79,90.+&type=phone_number&app_absent=1" class="cta-btn">FALAR COM ATENDENTE</a>
+    </div>
+      
+    </div>
+    
     <!-- FOOTER -->
     <div class="footer">
       <p>
-        *Instalação grátis na maioria das cidades atendidas. Fidelidade de 12 meses.<br>
-        Oferta válida até 31/03/2026. Após o período de fidelidade, o valor sem desconto se aplica.
+        *Instalação grátis na maioria das cidades atendidas.<br>
+        *Oferta válida até 31/03/2026.<br>
+        *Fidelidade de 12 meses.<br>
+        *Após o período de fidelidade, se o plano não for renovado, o valor sem desconto se aplica.
       </p>
     </div>
 
